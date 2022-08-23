@@ -40,7 +40,7 @@ class WiFiConnectionHandler : public ConnectionHandler
     virtual unsigned long getTime() override;
     virtual Client & getClient() override{ return _wifi_client; }
     virtual UDP & getUDP() override { return _wifi_udp; }
-    virtual SSLClient & getSSLClient() override{ return _wifi_ssl_client; }
+    virtual Client & getSSLClient() override{ return _wifi_ssl_client; }
 
 
   protected:
