@@ -42,6 +42,7 @@ class NBConnectionHandler : public ConnectionHandler
     virtual unsigned long getTime() override;
     virtual Client & getClient() override { return _nb_client; };
     virtual UDP & getUDP() override { return _nb_udp; };
+    virtual SSLClient & getSSLClient() override { return _nb_ssl_client; };
 
 
   protected:
@@ -66,6 +67,7 @@ class NBConnectionHandler : public ConnectionHandler
     GPRS _nb_gprs;
     NBUDP _nb_udp;
     NBClient _nb_client;
+    NBSSLClient _nb_ssl_client;
 };
 
 #endif /* #ifdef BOARD_HAS_NB  */
