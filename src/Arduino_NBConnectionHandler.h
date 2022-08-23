@@ -42,7 +42,7 @@ class NBConnectionHandler : public ConnectionHandler
     virtual unsigned long getTime() override;
     virtual Client & getClient() override { return _nb_client; };
     virtual UDP & getUDP() override { return _nb_udp; };
-    virtual SSLClient & getSSLClient() override { return _nb_ssl_client; };
+    virtual Client & getSSLClient() override { return _nb_ssl_client; };
 
 
   protected:
