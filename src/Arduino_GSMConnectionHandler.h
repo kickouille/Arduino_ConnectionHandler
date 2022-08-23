@@ -40,6 +40,7 @@ class GSMConnectionHandler : public ConnectionHandler
 
     virtual unsigned long getTime() override;
     virtual Client & getClient() override { return _gsm_client; };
+    virtual SSLClient & getSSLClient() override { return _gsm_ssl_client; };
     virtual UDP & getUDP() override { return _gsm_udp; };
 
 
@@ -63,6 +64,7 @@ class GSMConnectionHandler : public ConnectionHandler
     GPRS _gprs;
     GSMUDP _gsm_udp;
     GSMClient _gsm_client;
+    GSMSSLClient _gsm_ssl_client;
 };
 
 #endif /* #ifdef BOARD_HAS_GSM  */
