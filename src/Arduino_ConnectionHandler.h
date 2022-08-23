@@ -157,7 +157,7 @@ class ConnectionHandler {
       virtual unsigned long getTime() = 0;
       virtual Client &getClient() = 0;
       virtual UDP &getUDP() = 0;
-      virtual SSLClient &getSSLClient() = 0;
+      virtual Client &getSSLClient() = 0;
     #endif
 
     #if defined(BOARD_HAS_LORA)
